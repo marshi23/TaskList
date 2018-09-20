@@ -1,0 +1,16 @@
+
+<h2>All Upcoming Tasks:</h2>
+<ul class="task-list">
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.name, task_path(task.id) %></li>
+  <%end%>
+</ul>
+
+
+
+<!--
+<ul class="task-list">
+  <% @tasks.each do |task| %>
+    <li><%= task %></li>
+  <% end %>
+</ul> -->

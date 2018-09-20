@@ -1,0 +1,14 @@
+<% if @task.nil? %>
+  <h1> 404 Not Found </h1>
+<% else %>
+  <h2>Task Details:</h2>
+
+  <p>Name: <%=@task.name %></p>
+  <p>Details: <%=@task.description %></p>
+  <p>Status: <%=@task.status %></p>
+  <p>Expected Completion: <%=@task.completion_date %></p>
+
+  <a href="">Edit Task</a><br>
+  <a hredf="">Delete Task</a>
+
+  <% end %>
