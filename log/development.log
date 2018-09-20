@@ -1231,3 +1231,204 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 14:51:43 -0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maryam/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 284ms (Views: 267.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 14:51:47 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 14:51:48 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 14:51:51 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 14:52:04 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 14:52:12 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:01:31 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maryam/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 263ms (Views: 249.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:01:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:36 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:40 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:40 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:41 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:41 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:41 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:01:42 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:02:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:02:03 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started GET "/" for 127.0.0.1 at 2018-09-20 15:03:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:03:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:03:23 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:04 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:13 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:04:49 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:50 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:51 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:52 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:04:59 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:05:00 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:05:01 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:05:01 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:05:01 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:05:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:09:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 60.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 15:09:21 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FpQPWqYR1s8TkUqdtJGUS6cLpEpxNUaYC6OPkAba9cH/XQrv2reUcXKWGGj10htB6dpxSjUaE5JemieFMVvx9A==", "task"=>{"name"=>"", "description"=>"", "completion_date"=>"", "status"=>""}, "commit"=>"Save Task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27
+  [1m[36mTask Create (2.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "status", "created_at", "updated_at", "completion_date", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["status", ""], ["created_at", "2018-09-20 22:09:21.234853"], ["updated_at", "2018-09-20 22:09:21.234853"], ["completion_date", ""], ["description", ""]]
+  ↳ app/controllers/tasks_controller.rb:27
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27
+Redirected to http://localhost:3000/
+Completed 200 OK in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-20 15:09:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
