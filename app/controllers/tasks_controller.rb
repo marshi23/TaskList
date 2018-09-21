@@ -17,7 +17,21 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id].to_i)
+  end
 
+  # new and create are helping with adding a new task
+  def new
+    @task = Task.new
+  end
+
+  def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], status: params[:task][:status])
+
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def update
@@ -36,19 +50,18 @@ class TasksController < ApplicationController
 
   end
 
-  # new and create are helping with adding a new task
-  def new
-    @task = Task.new
-  end
+  def destroy
+    task = Task.find_by(id: params[:id].to_i)
 
-  def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], status: params[:task][:status])
+    @deleted_task = task.destroy
 
-    if @task.save
-      redirect_to root_path
+    if task.destroy
+      redirect_to delete_task_path
     else
-      render :new
+      redirect_to task_path
     end
+
   end
+
 
 end

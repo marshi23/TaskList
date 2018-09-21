@@ -1,7 +1,12 @@
-
-<h2>My Tasks</h2>
 <ol class="task-list">
+  <h2>My Tasks</h2>
+
   <% @tasks.each do |task| %>
     <li><%= link_to task.name, task_path(task.id) %></li>
+
+    <%= link_to "Edit", edit_task_path(task.id)%>
+    <%= link_to "Delete", task_path(task.id), method: :delete%>
   <%end%>
+
+
 </ol>

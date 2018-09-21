@@ -7,7 +7,11 @@
   <p>Details: <%=@task.description %></p>
   <p>Status: <%=@task.status %></p>
   <p>Expected Completion: <%=@task.completion_date %></p>
-  <!-- <a href="">Delete Task</a> -->
+
   <% end %>
 
   <%= link_to "Edit #{@task.name}", edit_task_path(@task.id)%>
+  <div></div>
+
+  <%= link_to "Delete #{@task.name}", delete_task_path(@task.id)%>
+  <!-- <%= link_to "Delete #{@task.name}", delete_task_path(@task.id), method: :delete%> -->
