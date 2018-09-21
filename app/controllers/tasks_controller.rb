@@ -15,8 +15,28 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id].to_i)
+
+  end
+
+  def update
+    @task = Task.find(params[:id].to_i)
+
+    @task[:name] = params[:task][:name]
+    @task[:description] = params[:task][:description]
+    @task[:status] = params[:task][:status]
+    @task[:completion_date] = params[:task][:completion_date]
+
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
+
+  end
+
   # new and create are helping with adding a new task
-  #
   def new
     @task = Task.new
   end

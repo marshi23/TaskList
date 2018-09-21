@@ -14,6 +14,21 @@
  *= require_self
  */
 
+header {
+  background-color: lightgrey;
+}
+
+aside {
+  background-color: lightblue;
+}
+
+main  {
+  background-color: lightgrey;
+}
+
+h1 {
+  color: white;
+}
 
 /* .wrapper {
   width: 60vw;
