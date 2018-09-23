@@ -1,9 +1,10 @@
 
 # TASKS = ['eat', 'code', 'sleep']
+require 'time'
 
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:completion_date)
+    @tasks = Task.all.order(:completion_date) # this supplies erb file with tasks
   end
 
   def show
@@ -51,17 +52,21 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task = Task.find_by(id: params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
 
-    @deleted_task = task.destroy
-
-    if task.destroy
-      redirect_to delete_task_path
-    else
-      redirect_to task_path
+    if @task.destroy
+      redirect_to root_path
     end
 
   end
 
+  def complete
+    @task = Task.find_by(id: params[:id].to_i)
+    @task.update_attribute(:completion_date, Time.now)
+
+    redirect_to root_path, notice: "Todo item completed"
+    # params[:task][:completion_date] = Time.now
+    # @task[:completion_date] = params[:task][:completion_date]
+  end
 
 end

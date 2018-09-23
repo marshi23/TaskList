@@ -1,17 +1,16 @@
 <% if @task.nil? %>
-  <h1> 404 Not Found </h1>
+<h1> 404 Not Found </h1>
 <% else %>
-  <h2>Task Details:</h2>
+<h2>Task Details:</h2>
 
-  <p>Name: <%=@task.name %></p>
-  <p>Details: <%=@task.description %></p>
-  <p>Status: <%=@task.status %></p>
-  <p>Expected Completion: <%=@task.completion_date %></p>
+<p>Name: <%=@task.name %></p>
+<p>Details: <%=@task.description %></p>
+<p>Status: <%=@task.status %></p>
+<p>Expected Completion: <%=@task.completion_date %></p>
 
-  <% end %>
+<% end %>
 
-  <%= link_to "Edit #{@task.name}", edit_task_path(@task.id)%>
-  <div></div>
+<%= link_to "Edit #{@task.name}", edit_task_path(@task.id)%>
+<div></div>
 
-  <%= link_to "Delete #{@task.name}", delete_task_path(@task.id)%>
-  <!-- <%= link_to "Delete #{@task.name}", delete_task_path(@task.id), method: :delete%> -->
+<%= link_to "Delete #{@task.name}", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure you want to delete?'}%>

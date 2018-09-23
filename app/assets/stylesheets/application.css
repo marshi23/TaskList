@@ -13,55 +13,112 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Nothing+You+Could+Do');
+
+ .wrapper {
+   font-family: 'Noto Serif JP', sans-serif;
+    display: grid;
+    /* grid-gap: 10px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+     "header header header"
+     "aside main main"
+     "footer footer footer";
+ }
 
 header {
-  background-color: lightgrey;
+  height: 8em;
+  background-color: #E4DFDA;
+  grid-area: header;
+  padding-top: 2em;
+  padding-left: 3em;
+}
+
+header h1 {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 3em;
+  color: #F6F740;
 }
 
 aside {
-  background-color: lightblue;
+  background-color: #E4DFDA;
+   grid-area: aside;
+}
+
+aside a:link {
+    text-decoration: none;
+    color: black;
+
+}
+aside li:hover {
+    background-color: #F6F740;
+
+}
+aside a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+aside ul {
+  list-style: none;
+
+}
+
+aside li {
+  line-height: 2em;
+  border-style: solid;
+  border-width: 1px;
+  width: 7em;
+  text-align: center;
+  margin: 0 0 2em 0;
+  border-radius: 5px;
+  color: white;
+
+}
+
+
+footer {
+   height: 40%;
+   grid-area: footer;
+   text-align: center;
+   background-color: #E4DFDA;
+   color: #F6F740;
+   font-family: 'Nothing You Could Do', cursive;
 }
 
 main  {
-  background-color: lightgrey;
+  background-color: #E4DFDA;
+  grid-area: main;
+  font-family: 'Nothing You Could Do', cursive;
+
 }
 
-h1 {
-  color: white;
-}
+/* main a:visited {
+  color: red;
+} */
 
 h2 {
-  color: white;
+  /* color: #F6F740; */
 }
 
-/* .wrapper {
-  width: 60vw;
-  height: 90vh;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 1fr 1fr;
-}
-
-header {
-  background-color: green;
-  height: 15vh;
-}
-
-main {
-  background-color: yellow;
-  grid-column: 2;
-  grid-row: 2 / 2;
-  align-items: center;
+.task-list {
+  text-align: center;
+  list-style: none;
+  padding-top: 1rem;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  margin-right: 4em;
+  margin-left: 4em;
+  background-color: white;
+  border-radius: 5px;
 
 }
 
-side {
- grid-column: 2;
- grid-row: 1;
+.task-list li {
+  line-height: 3em;
+
 }
-
-.footer {
-
-} */
+.task-button {
+  color: red;
+}
