@@ -65,8 +65,7 @@ class TasksController < ApplicationController
     @task.update_attribute(:completion_date, Time.now)
 
     redirect_to root_path, notice: "Todo item completed"
-    # params[:task][:completion_date] = Time.now
-    # @task[:completion_date] = params[:task][:completion_date]
+  
   end
 
 end
