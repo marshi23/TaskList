@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # resources :tasks do
   #
   #   member do
-  #     patch :complete
+  #     put :complete
   #   end
   #
   # end
@@ -17,12 +17,12 @@ Rails.application.routes.draw do
 
   get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
 
-
   patch '/tasks/:id', to: 'tasks#update', as: 'update_task'
 
   get '/tasks/:id', to: 'tasks#show', as: 'task'
 
   delete '/tasks/:id', to: 'tasks#destroy'
 
-  patch '/tasks/:id', to: 'task#complete', as: 'complete_task'
+  patch '/tasks/:id', to: 'tasks#complete'
+
 end

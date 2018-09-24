@@ -1,15 +1,15 @@
 <ol class="task-list">
   <h2>Tasks</h2>
 
-  <% @tasks.each do |task| %> <!-- @task provided by TasksController#index-->
-    <li><%= link_to task.name, task_path(task.id) %></li>
+  <% @tasks.each do |task| %>
+    <li id="task"><%= link_to task.name, task_path(task.id) %></li>
 
     <%= link_to "Edit", edit_task_path(task.id)%>
     <%= link_to "Delete", task_path(task.id), method: :delete,
     data: { confirm: 'Are you sure you want to delete?'}, class: 'button'%>
-    <% if task.completion_date != nil %>
-    <%= link_to "Complete", complete_task_path(task.id), method: :patch, class: 'button' %>
-    <%end%>
+
+    <%= link_to "Complete", task_path(task.id), method: :patch, class: 'button' %>
+
   <%end%>
 
 

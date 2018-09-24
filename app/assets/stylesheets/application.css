@@ -15,6 +15,9 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Nothing+You+Could+Do|Spirax');
 
+html {
+  background-color: #E4DFDA;
+}
  .wrapper {
    font-family: 'Noto Serif JP', sans-serif;
     display: grid;
@@ -29,7 +32,6 @@
 
 header {
   height: 8em;
-  background-color: #E4DFDA;
   grid-area: header;
   padding-top: 2em;
   padding-left: 3em;
@@ -42,7 +44,6 @@ header h1 {
 }
 
 aside {
-  background-color: #E4DFDA;
    grid-area: aside;
 }
 
@@ -52,9 +53,9 @@ aside a:link {
 
 }
 aside li:hover {
-    background-color: #F6F740;
-
+    color: #F6F740;
 }
+
 aside a:visited {
     text-decoration: none;
     color: white;
@@ -71,17 +72,16 @@ aside li {
   border-width: 1px;
   width: 7em;
   text-align: center;
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
   border-radius: 5px;
   color: white;
 }
-
 
 footer {
    height: 40%;
    grid-area: footer;
    text-align: center;
-   background-color: #E4DFDA;
+
    color: #FFF577;
    font-family: 'Nothing You Could Do', cursive;
 }
@@ -95,18 +95,25 @@ main a {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: 'Nothing You Could Do', cursive;
+
+}
+
+#task {
+  font-size: 1.5em;
+  font-family: 'Nothing You Could Do', cursive;
+  color: black;
 }
 
 .task-list {
   text-align: center;
   list-style: none;
   padding-top: 1rem;
-  padding-bottom: 1em;
-  padding-right: 1em;
-  margin-right: 4em;
-  margin-left: 4em;
+  padding-bottom: 5em;
+  padding-right: 2em;
+  margin-right: 7em;
+  margin-left: 7em;
   background-color: white;
   border-radius: 5px;
 
@@ -119,11 +126,9 @@ h2 {
 
 .task-list a:hover {
   text-decoration: none;
-  color: #FFF577;
+  background-color: #FFF577;
 
 }
- /* font-family: 'Homemade+Apple'; */
- /* font-family: 'Nothing You Could Do', cursive; */
 
 .task-list li {
   line-height: 3em;
@@ -133,8 +138,4 @@ h2 {
 .button {
   padding-left: .4em;
   border-left: 2px solid #bbb;
-}
-
-.task-button {
-  color: red;
 }

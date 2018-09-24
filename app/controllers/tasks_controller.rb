@@ -1,10 +1,9 @@
 
-# TASKS = ['eat', 'code', 'sleep']
 require 'time'
 
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:completion_date) # this supplies erb file with tasks
+    @tasks = Task.all
   end
 
   def show
@@ -26,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], status: params[:task][:status])
+    @task = Task.new(task_params)
 
     if @task.save
       redirect_to root_path
@@ -36,7 +35,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find(params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
 
     @task[:name] = params[:task][:name]
     @task[:description] = params[:task][:description]
@@ -60,12 +59,25 @@ class TasksController < ApplicationController
 
   end
 
+  
   def complete
     @task = Task.find_by(id: params[:id].to_i)
-    @task.update_attribute(:completion_date, Time.now)
 
-    redirect_to root_path, notice: "Todo item completed"
-  
+    if @task.active?
+      @task.update(active: true).save
+      @task.update_attribute(:completion_date, Time.now)
+      redirect_to root_path, notice: "Todo item completed"
+    else
+      @task.update(active: false)
+    end
+
+
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(:name, :description, :status, :completion_date)
   end
 
 end
