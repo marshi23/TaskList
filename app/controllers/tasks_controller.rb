@@ -25,9 +25,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    task = Task.new(task_params)
 
-    if @task.save
+    if task.save
       redirect_to root_path
     else
       render :new
@@ -35,14 +35,14 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find_by(id: params[:id].to_i)
+    task = Task.find_by(id: params[:id].to_i)
 
-    @task[:name] = params[:task][:name]
-    @task[:description] = params[:task][:description]
-    @task[:status] = params[:task][:status]
-    @task[:completion_date] = params[:task][:completion_date]
+    task[:name] = params[:task][:name]
+    task[:description] = params[:task][:description]
+    task[:status] = params[:task][:status]
+    task[:completion_date] = params[:task][:completion_date]
 
-    if @task.save
+    if task.save
       redirect_to root_path
     else
       render :new
@@ -51,24 +51,21 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find_by(id: params[:id].to_i)
-
-    if @task.destroy
-      redirect_to root_path
-    end
-
+    task = Task.find_by(id: params[:id].to_i)
+    task.destroy
+    redirect_to root_path
   end
 
-  
-  def complete
-    @task = Task.find_by(id: params[:id].to_i)
 
-    if @task.active?
-      @task.update(active: true).save
-      @task.update_attribute(:completion_date, Time.now)
+  def complete
+    task = Task.find_by(id: params[:id].to_i)
+
+    if task.active?
+      task.update(active: true).save
+      task.update_attribute(:completion_date, Time.now)
       redirect_to root_path, notice: "Todo item completed"
     else
-      @task.update(active: false)
+      task.update(active: false)
     end
 
 
