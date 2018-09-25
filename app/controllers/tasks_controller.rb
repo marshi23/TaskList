@@ -59,7 +59,7 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find_by(id: params[:id].to_i)
-
+  
     if task.active?
       task.update(active: true).save
       task.update_attribute(:completion_date, Time.now)

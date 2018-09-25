@@ -116,12 +116,11 @@ h2 {
   margin-left: 7em;
   background-color: white;
   border-radius: 5px;
-
 }
 
 .task-list a {
   text-decoration: none;
-
+  color: black;
 }
 
 .task-list a:hover {
@@ -138,4 +137,8 @@ h2 {
 .button {
   padding-left: .4em;
   border-left: 2px solid #bbb;
+}
+
+#task-complete::selection {
+    text-decoration: line-through;
 }

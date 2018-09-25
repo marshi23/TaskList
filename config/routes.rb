@@ -23,6 +23,6 @@ Rails.application.routes.draw do
 
   delete '/tasks/:id', to: 'tasks#destroy'
 
-  patch '/tasks/:id', to: 'tasks#complete'
+  get '/tasks/:id', to: 'tasks#complete'
 
 end

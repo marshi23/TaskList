@@ -8,8 +8,8 @@
     <%= link_to "Delete", task_path(task.id), method: :delete,
     data: { confirm: 'Are you sure you want to delete?'}, class: 'button'%>
 
-    <%= link_to "Complete", task_path(task.id), method: :patch, class: 'button' %>
-
+    <section id="task-complete"><%= link_to "Complete", root_path, method: :get%></section>
+    
   <%end%>
 
 
