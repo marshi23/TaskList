@@ -36,18 +36,13 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find_by(id: params[:id].to_i)
-
-    task[:name] = params[:task][:name]
-    task[:description] = params[:task][:description]
-    task[:status] = params[:task][:status]
-    task[:completion_date] = params[:task][:completion_date]
+    task.update(task_params)
 
     if task.save
       redirect_to root_path
     else
       render :new
     end
-
   end
 
   def destroy
@@ -57,24 +52,24 @@ class TasksController < ApplicationController
   end
 
 
-  def complete
+  def completed
     task = Task.find_by(id: params[:id].to_i)
-  
-    if task.active?
-      task.update(active: true).save
+
+    if task.status == false
+      task.update(status: true).save
       task.update_attribute(:completion_date, Time.now)
-      redirect_to root_path, notice: "Todo item completed"
-    else
-      task.update(active: false)
+      # redirect_to root_path, notice: "Todo item completed"
+    elsif task.status == true
+      task.update(status: false).save
+      task.update_attribute(:completion_date, nil)
     end
-
-
   end
 
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :status, :completion_date)
+    return params.require(:task).permit(
+      :name, :description, :completion_date, :status)
   end
 
 end

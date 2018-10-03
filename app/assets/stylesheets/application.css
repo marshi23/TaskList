@@ -139,6 +139,6 @@ h2 {
   border-left: 2px solid #bbb;
 }
 
-#task-complete::selection {
+#task-complete {
     text-decoration: line-through;
 }
